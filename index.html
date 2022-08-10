@@ -1,1 +1,44 @@
-Hello World
+<html>
+<head>
+<title>Loan Approval Process</title>
+<h3><center><b><u>Loan Approval Form</u></b><center></h3>
+</head>
+<body>
+<form id="form1" action="http://192.168.149.192:8086/LoanApprovalWS/LoanApprovalTest" method="post" enctype="multipart/form-data"></form>
+<form id="form2" action="http://192.168.149.192:8086/LoanApprovalForm/UploadDownloadFileServlet" method="post" enctype="multipart/form-data"></form>
+<form id="form3" action="http://192.168.149.192:8086/LoanApprovalForm/UploadDownloadFileServlet" method="post" enctype="multipart/form-data"></form>
+<form id="form4" action="http://192.168.149.192:8086/LoanApprovalForm/UploadDownloadFileServlet" method="post" enctype="multipart/form-data"></form>
+
+<label for="ApplicantName">ApplicantName:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" id="ApplicantName" name="ApplicantName" form="form1"><br><br>
+<label for="DateBirth">Date of Birth:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" id="DateBirth" name="DateBirth" form="form1"><br><br>
+<label for="FatherName">Father's Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" id="FatherName" name="FatherName" form="form1"><br><br>
+
+<label for="Address">Address:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" id="Address" name="Address" form="form1"><br><br>
+<label for="AadharNumber">AadharNumber:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" id="AadharNumber" name="AadharNumber" form="form1"><br><br>
+<label for="PanNumber">PanNumber:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" id="PanNumber" name="PanNumber" form="form1"><br><br>
+
+<label for="OccupationType">Occupation Type:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" id="OccupationType" name="OccupationType" form="form1"><br><br>
+<label for="FormNumber">Form Number:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" id="FormNumber" name="FormNumber" form="form1"><br><br>
+<label for="AppDate">Application Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" id="AppDate" name="AppDate" form="form1"><br><br>
+
+<label for="GuarantorName">GuarantorName:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" id="GuarantorName" name="GuarantorName" form="form1"><br><br>
+<label for="SigninDate">Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" id="SigninDate" name="SigninDate" form="form1"><br><br>
+<label for="Place">Place:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><input type="text" id="Place" name="Place" form="form1"><br><br>
+
+<label for="label1"><h3><b><center><u>Upload Documents</u></center></b></h3> 
+Upload ITR for Past 2 Years:<input type="file" name="fileName" form="form2">
+<input type="submit" value="Upload" form="form2"><br><br>
+
+Upload Salary Slip for last three months:<input type="file" name="fileName2" form="form3">
+<input type="submit" value="Upload" form="form3"><br><br>
+
+Upload Form 16 for two years:<input type="file" name="fileName3" form="form4">
+<input type="submit" value="Upload" form="form4"><br><br>
+
+Upload Bank Statement :<input type="file" name="fileName4" form="form4">
+<input type="submit" value="Upload" form="form4"><br><br>
+
+<center><input type="submit" value="submit" form="form1"></center>
+</form>
+</body>
+</html>
