@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style type="text/css">
+#popupbox {
+	margin: 0;
+	margin-left: 40%;
+	margin-right: 40%;
+	margin-top: 50px;
+	padding-top: 10px;
+	width: 20%;
+	height: 150px;
+	position: absolute;
+	background: #FBFBF0;
+	border: solid #000000 2px;
+	z-index: 9;
+	font-family: arial;
+	visibility: visible;
+}
+</style>
+</head>
+<body>
+	<div id="logo" align="center">
+    <img src="https://newgensoft.com/wp-content/uploads/2022/03/newgen-opengraph.png" align="center" height="100px" width="150px">
+    </div>
+	<div id="popupbox">
+		<form name="login" action="" method="post">
+			<center>Username:</center>
+			<center>
+				<input id="username" name="username" size="14" />
+			</center>
+			<center>Password:</center>
+			<center>
+				<input id="password" name="password" type="password" size="14" />
+			</center>
+			<center>
+				<input type="submit" id="submit" name="submit" value="login" onclick='authenticate();' />
+			</center>
+		</form>
+	</div>
+</body>
+<script src="http://192.168.148.72:8086/LoanApprovalForm/config.js"></script>
+<script language="JavaScript" type="text/javascript">
+function authenticate(){   
+	 //alert('inside auth');  
+	//alert(prop.user);
+	//alert(prop.password);  
+	var username=document.getElementById('username').value;    
+	var password=document.getElementById('password').value;    
+	//alert(username + password); 
+	  
+	if(username==prop.user && password==prop.password){        
+		//alert('user loggedin');  
+	document.login.action="http://192.168.148.72:8086/LoanApprovalForm/MainForm.html";       
+	document.getElementById('login').submit();//MainForm.html
+	    
+		}    
+		else if(username.length==0 || password.length==0 ){
+		alert('Field cannot be empty.');    
+		 document.login.action=" "; 
+		 document.getElementById('login').submit();       
+		}
+		else{        
+			alert('Enter correct details');    
+			 document.login.action=" ";  
+			 document.getElementById('login').submit();      
+			}
+}
+
+</script>
+</html>
+
